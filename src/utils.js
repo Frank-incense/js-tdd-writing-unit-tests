@@ -1,16 +1,15 @@
 // Your code here
-const vowels = ['a', 'e', 'i', 'o', 'u'];
 export function pointsForWord(word){
     let points = 0;
+    if (!word){
+        return points
+    }
     for(let letter of word){
-        if (vowels.includes(letter)){
-            points += 1;
-        }
-        else{
-            points += 2;
-        }
+        points += /[aeiou]/.test(letter.toLowerCase()) ? 1 : 2;
     }
     return points
 }
 
 // Side effect and data Fetching
+
+pointsForWord("test")
