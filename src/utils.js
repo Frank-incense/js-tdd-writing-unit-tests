@@ -10,6 +10,4 @@ export function pointsForWord(word){
     return points
 }
 
-// Side effect and data Fetching
-
 pointsForWord("test")
